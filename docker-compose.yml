@@ -1,9 +1,11 @@
 services:
+  frontend:
+    image: ethanwaynecook/quirknotes_frontend:latest
+    ports:
+    - "3000:80"
+
   backend:
-    build:
-      context: .
-      dockerfile: Dockerfile_backend
-      target: backend
+    image: ethanwaynecook/quirknotes_backend:latest
     ports:
     - "4000:4000"
     environment:
